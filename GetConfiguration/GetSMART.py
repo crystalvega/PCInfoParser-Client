@@ -1,10 +1,10 @@
 import subprocess, shutil, os
 def gen(path, args, config):
     subprocess.call(path + " /copyexit", shell=False)
-    os.makedirs('SMART' + "\\" + config[1], exist_ok=True)
-    smartpath = "SMART\\" + config[1] + "\\" + config[0] + ".txt"
-    shutil.copyfile(args, smartpath)
-    return smartpath
+    #os.makedirs('SMART' + "\\" + config[1], exist_ok=True)
+    #smartpath = "SMART\\" + config[1] + "\\" + config[0] + ".txt"
+    #shutil.copyfile(args, smartpath)
+    #return smartpath
    
 def status(path):
     statusret = []
@@ -21,7 +21,6 @@ def status(path):
 
 def smart(path, searchwords):
     smartret = []
-    b = False
     disknumb = 0
     with open(path, 'r', encoding='UTF-8') as f:
         for line in f:

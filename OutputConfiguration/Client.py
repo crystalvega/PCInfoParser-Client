@@ -3,7 +3,10 @@ import pickle
 import socket
 from time import sleep
 
-from Crypto.Cipher import AES
+try:
+    from Cryptodome.Cipher import AES
+except ModuleNotFoundError:
+   from Crypto.Cipher import AES 
 from scapy.all import *
 
 ClientSocket = socket.socket()

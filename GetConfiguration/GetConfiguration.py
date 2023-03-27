@@ -9,7 +9,7 @@ def get_char(config):
     i = 1
 
     c = wmi.WMI()
-    smartfile = GetSMART.gen('C:\\Windows\\Temp\\dataofpack1\\tools\\DiskInfo32.exe', 'C:\\Windows\\Temp\\dataofpack1\\tools\\DiskInfo.txt', config)
+    GetSMART.gen('C:\\Windows\\Temp\\dataofpack1\\tools\\DiskInfo32.exe', 'C:\\Windows\\Temp\\dataofpack1\\tools\\DiskInfo.txt', config)
     status = GetSMART.status('C:\\Windows\\Temp\\dataofpack1\\tools\\DiskInfo.txt')
     smart = GetSMART.smart('C:\\Windows\\Temp\\dataofpack1\\tools\\DiskInfo.txt', smartwords)
     display = GetDisplay.get(c.Win32_DesktopMonitor()[0].pnpdeviceid)
