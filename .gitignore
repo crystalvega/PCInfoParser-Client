@@ -1,6 +1,10 @@
-/build
-/build.bat
+
+*.cfg
+*.pyc
+*.bat
+*.spec
 /dist
-/Main.spec
+/build
+/dist
 /SMART
 /__pycache__
