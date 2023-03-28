@@ -6,7 +6,7 @@ from time import sleep
 try:
     from Cryptodome.Cipher import AES
 except ModuleNotFoundError:
-   from Crypto.Cipher import AES 
+    from Crypto.Cipher import AES 
 from scapy.all import *
 
 ClientSocket = socket.socket()
