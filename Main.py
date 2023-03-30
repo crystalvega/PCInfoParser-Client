@@ -1,5 +1,6 @@
 import asyncio
 import os
+from pathlib import Path
 
 from command_runner.elevate import elevate
 
@@ -10,6 +11,11 @@ import ZIP
 from GetConfiguration import GetConfiguration as gc
 from OutputConfiguration import Client
 
+def save_project_root() -> Path:
+    return Path(__file__).parent
+
+abs_path = str(save_project_root())
+Config.name = abs_path+'\\client.cfg'
 
 class clientconnect:
     async def start(ip, port):
@@ -24,7 +30,7 @@ def main():
     try:
         config = GUI.start("C:\\Program Files\\ConfigNKU\\confignku.txt")
         check, error, configparse = Config.Check()
-        datefile = 'C:\\Program Files\\ConfigNKU\\Main\\lastsend.txt'
+        datefile = abs_path+'\\lastsend.txt'
         if check:
             if CheckDate.CheckDate(datefile, 7):
                 Client.key = configparse[2]
